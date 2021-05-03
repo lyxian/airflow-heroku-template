@@ -1,7 +1,7 @@
 echo "Enter app name: "
 read app
 
-if [[ $(heroku create $app) ]]
+if [[ $(heroku create $app --buildpack heroku/python) ]]
 then
 echo "App created successfully"
 else
