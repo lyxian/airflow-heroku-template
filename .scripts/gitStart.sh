@@ -1,8 +1,10 @@
-git checkout -b $(cat whoami)-$(git log --format="%H" -n 1 | head -c 8)
+branch=$(cat whoami)-$(git log --format="%H" -n 1 | head -c 8)
+
+git checkout -b $branch
 git add .
 git commit -m "$whoami-init"
 git push
 
 git branch -M main
 git push heroku main
-git branch -M $whoami
+git branch -M $branch
