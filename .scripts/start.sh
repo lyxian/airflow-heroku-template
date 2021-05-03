@@ -9,6 +9,8 @@ echo "App not created...Try again"
 exit
 fi
 
+echo $app > whoami
+
 heroku addons:create heroku-postgresql:hobby-dev --app $app 
 
 var=AIRFLOW__CORE__SQL_ALCHEMY_CONN
