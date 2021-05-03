@@ -9,6 +9,9 @@ echo "App not created...Try again"
 exit
 fi
 
+branch=$(cat whoami)-$(git log --format="%H" -n 1 | head -c 8)
+git checkout -b $branch
+
 echo $app > whoami
 
 heroku addons:create heroku-postgresql:hobby-dev --app $app 
