@@ -17,7 +17,7 @@ AIRFLOW__CORE__FERNET_KEY=$(openssl rand -base64 32)
 AIRFLOW__API__AUTH_BACKEND=airflow.api.auth.backend.basic_auth" > .env
 
 ### Install Packages
-pip install wheel apache-airflow==2.0.2
+pip install wheel apache-airflow==2.0.2 psycopg2-binary
 
 ### Export variables in future sessions
 # echo "
