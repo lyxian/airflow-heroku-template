@@ -1,4 +1,4 @@
-branch=$(cat whoami)-$(git log --format="%H" -n 1 | head -c 8)
+branch=$(git branch --show-current)
 
 git checkout -b $branch
 git add .
