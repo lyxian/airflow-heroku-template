@@ -8,3 +8,5 @@
   - heroku config:set $var=$(heroku config:get DATABASE_URL)
 - run in heroku (init.sh)
   - cd into app
+
+## Automate Local Setup and Git Integration
