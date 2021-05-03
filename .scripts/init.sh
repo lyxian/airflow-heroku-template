@@ -6,7 +6,7 @@ x=$(echo "$(python3 --version)" | cut -d " " -f 2 | cut -d "." -f1-2)
 echo $x
 
 ### Create Files/Folders 
-mkdir $PWD/ dags
+mkdir $PWD/dags
 mkdir $PWD/.users
 
 echo "AIRFLOW_HOME=$PWD/airflow
